@@ -26,9 +26,9 @@ body {
   line-height: 1.6;
 }
 
-.bg-gradient {
+/* .bg-gradient {
   @apply bg-gradient-custom;
-}
+} */
 
 .text-glow {
   text-shadow: 0 0 10px var(--glow-color);
