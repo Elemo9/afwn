@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import WelcomeToAFWN from "./components/WelcomeToAFWN";
 import PageSlider from "./components/PageSlider";
+import EventSection from "./components/EventSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Banner />
       <WelcomeToAFWN />
       <PageSlider />
+      <EventSection />
     </main>
   );
 }
