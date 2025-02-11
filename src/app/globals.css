@@ -46,3 +46,28 @@ body {
     text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
   }
 }
+
+.swiper{
+  width: 100% !important;
+  height: fit-content !important;
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.swiper-slide{
+  background-position: center !important;
+  background-size: cover !important;
+  height: 550px !important;
+  width: 400px !important;
+  overflow: hidden !important;
+  border-radius: 50px;
+  border-color: yellow;
+  border-width: 3px;
+}
+
+.swiper-slide img{
+  display: block;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
