@@ -32,7 +32,7 @@ export default function Header() {
         <Link href={"/news"} className='uppercase text-white text-xs tracking-wider font-semibold hover:text-yellow-500 duration-300 transition-all'>News</Link>
       </nav>
       
-      <h2 className='text-5xl font-extralight tracking-widest text-white uppercase ml-12'>AFWN</h2>
+      <h2 className='text-5xl font-extralight tracking-widest text-white uppercase ml-24'>AFWN</h2>
       
       <nav className='flex items-center gap-4 '>
         <Link href={"/gallery"} className='uppercase text-white text-xs tracking-wider font-semibold hover:text-yellow-500 duration-300 transition-all'>Registrations</Link>

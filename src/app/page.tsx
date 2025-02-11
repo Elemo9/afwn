@@ -6,6 +6,7 @@ import PageSlider from "./components/PageSlider";
 import EventSection from "./components/EventSection";
 import GetATicket from "./components/GetATicket";
 import StayUpdated from "./components/StayUpdated";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <EventSection />
       <GetATicket />
       <StayUpdated />
+      <Footer />
     </main>
   );
 }

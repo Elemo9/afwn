@@ -19,7 +19,7 @@ export default function StayUpdated() {
                 <input 
                     type='text'
                     placeholder='Your Email...'
-                    className='w-full text-xl text-gray-500 bg-transparent active:border-none active:out'
+                    className='w-full text-xl bg-transparent focus:outline-none text-white'
                 />
                 <button className='h-[50px] tracking-widest w-fit px-12 py-3 text-white bg-yellow-500 rounded-3xl absolute right-[3%] top-[16%]'>Subscribe</button>
 
