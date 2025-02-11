@@ -48,8 +48,6 @@ export default function EventSection() {
                         </div>
 
                         <button className='bg-yellow-500 w-fit -fit px-12 py-5 text-white font-semibold text-lg shadow-2xl rounded-3xl'>View Event Details</button>
-
-
                     </div>
                 </div>
             </div>
