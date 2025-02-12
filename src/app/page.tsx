@@ -15,7 +15,7 @@ export default function Home() {
       <Banner />
       <WelcomeToAFWN />
       <PageSlider />
-      <EventSection />
+      <EventSection />      
       <GetATicket />
       <StayUpdated />
       <Footer />
