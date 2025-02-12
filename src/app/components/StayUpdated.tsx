@@ -24,7 +24,7 @@ export default function StayUpdated() {
           Fusion 2025! Be the first to know about featured designers, event
           schedules, ticket releases, and exclusive behind-the-scenes content.
           Sign up for our newsletter and follow us on social media for real-time
-          updates and sneak peeks. Don't miss out on the chance to immerse
+          updates and sneak peeks. Don&rsquo;t miss out on the chance to immerse
           yourself in the glamour and creativity of African fashion—stay
           connected and inspired!
         </p>
