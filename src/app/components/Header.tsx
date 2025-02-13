@@ -8,6 +8,7 @@ import { CgProfile, CgMenu, CgClose } from "react-icons/cg";
 export default function Header() {
   const [scrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [galleryHovered, setGalleryHovered] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +36,9 @@ export default function Header() {
             whileHover={{ scale: 1.1, textShadow: "0px 0px 10px rgba(255,255,255,0.8)" }}
             transition={{ duration: 0.3 }}
           >
-            <Link href={`/${item.toLowerCase()}`} className="uppercase text-white text-sm tracking-wider font-semibold transition-all duration-300 hover:text-yellow-500">
+            <Link href={`/${item.toLowerCase()}`} 
+              className="uppercase relative text-white text-sm tracking-wider font-semibold transition-all duration-300 hover:text-yellow-500" 
+            >
               {item}
             </Link>
           </motion.div>

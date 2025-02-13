@@ -43,14 +43,14 @@ function PageSlider() {
           "https://res.cloudinary.com/dyn1k6wcl/image/upload/v1739242181/IMG_2850_lptbrl.jpg",
           "https://res.cloudinary.com/dyn1k6wcl/image/upload/v1739242180/IMG_2272-1_mhlena.jpg",
         ].map((src, index) => (
-          <SwiperSlide key={index}>
-            <Image
+          <SwiperSlide key={index} className="mySwiperCard">
+            <img
               src={src}
               alt={`Fashion Slide ${index + 1}`}
               width={600}
               height={800}
               className="w-full h-auto object-cover rounded-xl"
-              priority={index === 0} // First image loads first for better LCP
+            //   priority={index === 0} // First image loads first for better LCP
             />
           </SwiperSlide>
         ))}

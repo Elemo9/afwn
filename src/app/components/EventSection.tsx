@@ -23,13 +23,13 @@ export default function EventSection() {
         <div className="flex items-center w-full bg-[#1d1d1d] rounded-3xl px-10 py-12">
           <div className="w-[90%] mx-auto flex items-center justify-between">
       
-            <Image
+            <img
               src="https://res.cloudinary.com/dyn1k6wcl/image/upload/v1739242201/IMG_4074_knenq4.jpg"
               alt="Image for model"
               width={400}
               height={400}
               className="w-[35%] h-[400px] object-cover rounded-xl"
-              priority={true} // Improves LCP
+            //   priority={true} // Improves LCP
             />
 
             <div className="flex flex-col gap-5 w-[60%]">
