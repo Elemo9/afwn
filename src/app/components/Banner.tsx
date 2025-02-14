@@ -83,7 +83,7 @@ export default function Banner() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="p-[4px] rounded-full shadow-lg"
+          className="p-[1px] rounded-full shadow-lg"
           style={{
             background: "linear-gradient(to right, #ffff00, #ffffff, #bfa48f)",
           }}
