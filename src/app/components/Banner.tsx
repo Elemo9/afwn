@@ -27,7 +27,7 @@ export default function Banner() {
           style={{ fontFamily: "'Block Horns', sans-serif" }}
         >
           <motion.span
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: -200 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
             className="relative bg-clip-text text-transparent bg-[url('/assets/africa.png')] bg-cover bg-center drop-shadow-lg"
@@ -36,13 +36,13 @@ export default function Banner() {
           </motion.span>{" "}
           <motion.span
             className="relative inline-block"
-            initial={{ opacity: 0, y: 50, rotate: 10 }}
+            initial={{ opacity: 0, y: -100, rotate: 10 }}
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
             <motion.span
               className="absolute inset-0 text-white opacity-40 blur-md"
-              initial={{ opacity: 0, y: 50, rotate: 10 }}
+              initial={{ opacity: 0, y: 50, rotate: -10 }}
               animate={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
@@ -50,8 +50,8 @@ export default function Banner() {
             </motion.span>
             <motion.span
               className="relative text-white font-extrabold"
-              initial={{ opacity: 0, y: -50, rotate: -10 }}
-              animate={{ opacity: 1, y: 0, rotate: 0 }}
+              initial={{ opacity: 0, x: 100, rotate: -10 }}
+              animate={{ opacity: 1, x: 0, rotate: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
               FASHION
@@ -59,7 +59,7 @@ export default function Banner() {
           </motion.span>{" "}
           <motion.span
             className="text-yellow-500 font-extrabold"
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
@@ -78,6 +78,7 @@ export default function Banner() {
           ...Where culture and creativity collide
         </motion.p>
 
+        {/* "Register Now"*/}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -90,8 +91,8 @@ export default function Banner() {
           <motion.button
             whileTap={{
               scale: 0.95,
-              y: 2, 
-              transition: { type: "spring", stiffness: 200, damping: 8 }, // Smooth bounce
+              y: 2,
+              transition: { type: "spring", stiffness: 200, damping: 8 },
             }}
             className="relative rounded-full font-bold text-white text-lg md:text-2xl px-8 md:px-10 py-3 flex items-center justify-center"
             style={{
