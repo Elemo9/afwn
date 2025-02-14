@@ -12,31 +12,52 @@ export default function EventSection() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="h-fit w-full py-24"
+      className="h-fit w-full py-16"
     >
-      <div className="w-[85%] mx-auto flex flex-col gap-12">
-        {/* Event Tag */}
-        <motion.p
+      <div className="w-[90%] md:w-[85%] mx-auto flex flex-col gap-12">
+        <motion.div
           initial={{ scale: 0.9 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="w-fit h-fit px-12 py-4 rounded-3xl border border-yellow-500 text-white text-sm"
+          className="w-fit h-fit px-12 py-4 text-white text-2xl md:text-4xl font-extrabold"
         >
           Our Coming Events
-        </motion.p>
+        </motion.div>
 
         {/* Header and Button */}
         <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <h3 className="text-white font-extrabold text-4xl md:text-6xl w-full md:w-[800px]">
+          <h3 className="text-white font-extrabold text-3xl md:text-6xl w-full md:w-[800px]">
             Experience the Pulse of African Fashion: Unmissable Events Await!
           </h3>
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="bg-yellow-500 text-white font-semibold px-10 py-4 rounded-3xl"
+
+          {/* "Explore Older Events" Button */}
+          <motion.div
+            className="rounded-full overflow-hidden relative p-[2px]"
+            style={{
+              background: "linear-gradient(to right, #ffff00, #ffffff, #bfa48f)",
+            }}
+            whileHover={{ scale: 1.05 }}
           >
-            Explore Older Events
-          </motion.button>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-50 rounded-full"></div>
+
+            <motion.button
+              whileTap={{
+                scale: 0.97,
+                y: 2,
+                transition: { type: "spring", stiffness: 250, damping: 12 },
+              }}
+              className="relative rounded-full font-bold text-white text-lg md:text-xl px-8 md:px-12 py-3 md:py-4 flex items-center justify-center"
+              style={{
+                background:
+                  "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('/assets/africa.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              Explore Older Events
+            </motion.button>
+          </motion.div>
         </div>
 
         {/* Event Card */}
@@ -61,48 +82,51 @@ export default function EventSection() {
               African Fashion Week Nigeria 2025 Summit
             </h2>
             <p className="text-lg text-white/60">
-              African Fashion and its Economic Impacts on Art, Film, Music and Tech
+              African Fashion and its Economic Impacts on Art, Film, Music, and Tech
             </p>
             <h4 className="text-white text-xl md:text-2xl mt-4 font-semibold">AFWN Inc.</h4>
 
             {/* Event Details Row */}
             <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-8">
               <div className="flex gap-4 items-center">
-                <FaLocationDot size={18} className="text-white/60" />
-                <p className="text-white/60">Lagos Oriental Hotel, Victoria Island Lagos</p>
+                <FaLocationDot size={22} className="text-white" />
+                <p className="text-white text-lg">Lagos Oriental Hotel, Victoria Island Lagos</p>
               </div>
 
               <div className="flex gap-4 items-center">
-                <FaRegCalendarAlt size={18} className="text-white/60" />
-                <p className="text-white/60">December 6th, 2025</p>
+                <FaRegCalendarAlt size={22} className="text-white" />
+                <p className="text-white text-lg">December 6th, 2025</p>
               </div>
 
               <div className="flex gap-4 items-center">
-                <FaRegClock size={18} className="text-white/60" />
-                <p className="text-white/60">12PM - 3PM</p>
+                <FaRegClock size={22} className="text-white" />
+                <p className="text-white text-lg">12PM - 3PM</p>
               </div>
             </div>
 
-            {/* View Event Button */}
+            {/* "View Event Details" Button */}
             <motion.div
-              className="rounded-full overflow-hidden flex justify-center w-fit mx-auto"
+              className="rounded-full overflow-hidden relative p-[2px] w-fit mx-auto"
               style={{
                 background: "linear-gradient(to right, #ffff00, #ffffff, #bfa48f)",
-                padding: "2px",
               }}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.05 }}
             >
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-50 rounded-full"></div>
+
               <motion.button
-                whileHover={{ scale: 1.02, filter: "brightness(1.1)" }}
-                whileTap={{ scale: 0.98 }}
-                className="relative rounded-full font-bold text-white px-8 py-3 flex items-center justify-center w-full"
+                whileTap={{
+                  scale: 0.97,
+                  y: 2,
+                  transition: { type: "spring", stiffness: 250, damping: 12 },
+                }}
+                className="relative rounded-full font-bold text-white text-lg md:text-xl px-8 md:px-12 py-3 md:py-4 flex items-center justify-center"
                 style={{
                   background:
-                    "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/assets/africa.png')", // Restored gradient and image
+                    "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('/assets/africa.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                  height: "55px",
-                  textShadow: "0 0 10px rgba(255,255,255,0.7)",
                 }}
               >
                 View Event Details
