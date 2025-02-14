@@ -1,10 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaDotCircle } from "react-icons/fa";
 
 export default function GetATicket() {
+  const [clickedButton, setClickedButton] = useState(null);
+
+  const handleClick = (button) => {
+    setClickedButton(button);
+    setTimeout(() => setClickedButton(null), 500);
+  };
+
   return (
     <div className="flex items-center h-fit w-full py-24 bg-black">
       <div className="w-[85%] mx-auto flex flex-col gap-10">
@@ -35,38 +42,39 @@ export default function GetATicket() {
                   "Adire Festivals",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4 md:gap-6">
-                    <FaDotCircle className="text-yellow-500" size={20} />
-                    <p className="text-white font-extralight">{item}</p>
+                    <FaDotCircle className="text-yellow-500" size={22} />
+                    <p className="text-white font-bold">{item}</p>
                   </div>
                 ))}
               </div>
 
               <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
                 <motion.div
-                  className="rounded-full overflow-hidden"
+                  className="rounded-full overflow-hidden relative p-[2px]"
                   style={{
                     background: "linear-gradient(to right, #ffff00, #ffffff, #bfa48f)",
-                    padding: "2px",
                   }}
                   whileHover={{ scale: 1.05 }}
                 >
+                  {/* Dark Overlay */}
+                  <div className="absolute inset-0 bg-black bg-opacity-50 rounded-full"></div>
+
                   <motion.button
-                    whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
-                    whileTap={{ scale: 0.95 }}
-                    className="relative rounded-full font-semibold text-white px-6 md:px-8 py-2 flex items-center justify-center"
+                    onClick={() => handleClick("gold")}
+                    animate={clickedButton === "gold" ? { scale: [1, 1.2, 1] } : {}}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="relative rounded-full font-bold text-white text-xl px-6 md:px-8 py-3 flex items-center justify-center"
                     style={{
                       background:
-                        "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/assets/africa.png')",
+                        "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('/assets/africa.png')",
                       backgroundSize: "cover",
                       backgroundPosition: "center",
-                      height: "50px",
-                      width: "100%",
                     }}
                   >
                     Buy Ticket
                   </motion.button>
                 </motion.div>
-                <p className="text-yellow-500 text-3xl md:text-4xl font-bold">
+                <p className="text-yellow-500 text-3xl md:text-4xl font-extrabold">
                   &#8358;10,000
                 </p>
               </div>
@@ -97,38 +105,39 @@ export default function GetATicket() {
                   "Trade Expo 2025",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4 md:gap-6">
-                    <FaDotCircle className="text-yellow-500" size={20} />
-                    <p className="text-white font-extralight">{item}</p>
+                    <FaDotCircle className="text-yellow-500" size={22} />
+                    <p className="text-white font-bold">{item}</p>
                   </div>
                 ))}
               </div>
 
               <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
                 <motion.div
-                  className="rounded-full overflow-hidden"
+                  className="rounded-full overflow-hidden relative p-[2px]"
                   style={{
                     background: "linear-gradient(to right, #ffff00, #ffffff, #bfa48f)",
-                    padding: "2px",
                   }}
                   whileHover={{ scale: 1.05 }}
                 >
+                  {/* Dark Overlay */}
+                  <div className="absolute inset-0 bg-black bg-opacity-50 rounded-full"></div>
+
                   <motion.button
-                    whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
-                    whileTap={{ scale: 0.95 }}
-                    className="relative rounded-full font-semibold text-white px-6 md:px-8 py-2 flex items-center justify-center"
+                    onClick={() => handleClick("diamond")}
+                    animate={clickedButton === "diamond" ? { scale: [1, 1.2, 1] } : {}}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="relative rounded-full font-bold text-white text-xl px-6 md:px-8 py-3 flex items-center justify-center"
                     style={{
                       background:
-                        "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/assets/africa.png')",
+                        "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('/assets/africa.png')",
                       backgroundSize: "cover",
                       backgroundPosition: "center",
-                      height: "50px",
-                      width: "100%",
                     }}
                   >
                     Buy Ticket
                   </motion.button>
                 </motion.div>
-                <p className="text-yellow-500 text-3xl md:text-4xl font-bold">
+                <p className="text-yellow-500 text-3xl md:text-4xl font-extrabold">
                   &#8358;50,000
                 </p>
               </div>
